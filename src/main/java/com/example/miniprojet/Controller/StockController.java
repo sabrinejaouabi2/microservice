@@ -51,7 +51,7 @@ public class StockController {
         int quantiteTotale = stockService.calculerQuantiteTotaleProduits();
         return new ResponseEntity<>(quantiteTotale, HttpStatus.OK);
     }
-    
+
     @GetMapping("/calculerStockActuel/{idEmplacement}")
     public ResponseEntity<Integer> calculerStockActuel(@PathVariable Long idEmplacement) {
         Emplacement emplacement = emplacementService.getEmplacementById(idEmplacement);
